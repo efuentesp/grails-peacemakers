@@ -2,9 +2,11 @@
 
 .gradle
 build/
+buildPlugins/
 
 # web application files
-/web-app/WEB-INF/classes
+/web-app/WEB-INF/
+/wrapper/
 
 # default HSQL database files for production mode
 /prodDb.*
