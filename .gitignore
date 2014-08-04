@@ -5,7 +5,7 @@ build/
 buildPlugins/
 
 # web application files
-/web-app/WEB-INF/
+/web-app/WEB-INF/classes/
 /wrapper/
 
 # default HSQL database files for production mode
