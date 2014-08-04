@@ -2,7 +2,10 @@ package com.peacemakers.resource
 
 import static org.grails.jaxrs.response.Responses.*
 
+import com.peacemakers.domain.School
+
 import javax.ws.rs.GET
+import javax.ws.rs.POST
 import javax.ws.rs.Produces
 import javax.ws.rs.Consumes
 import javax.ws.rs.Path
@@ -26,5 +29,10 @@ class SchoolCollectionResource {
   @Path('/{id}')
   SchoolResource getResource(@PathParam('id') Long id) {
     new SchoolResource(schoolResourceService: schoolResourceService, id: id)
+  }
+
+  @POST
+  Response create(School dto) {
+    created schoolResourceService.create(dto)
   }
 }
